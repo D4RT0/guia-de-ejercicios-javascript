@@ -9,7 +9,7 @@
   
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,13 +34,43 @@
         top: 0;
       }
     </style>
+
+<script>
+
+$(document).ready(function(){
+  
+
+  var donde = $('.texto');
+  var sizeFuenteOriginal = donde.css('font-size');
+  
+ 
+  $(".aumentar").click(function(){
+  	var sizeFuenteActual = donde.css('font-size');
+ 	var sizeFuenteActualNum = parseFloat(sizeFuenteActual, 10);
+    var sizeFuenteNuevo = sizeFuenteActualNum+1;
+	donde.css('font-size', sizeFuenteNuevo);
+	return false;
+  });
+ 
+
+  $(".disminuir").click(function(){
+  	var sizeFuenteActual = donde.css('font-size');
+ 	var sizeFuenteActualNum = parseFloat(sizeFuenteActual, 10);
+    var sizeFuenteNuevo = sizeFuenteActualNum-1;
+	donde.css('font-size', sizeFuenteNuevo);
+	return false;
+  });
+  
+});
+</script>
+
   </head>
   <body>
     <div class="designer">
       <h3>Toolbar</h3>
       <p><strong>Font-size</strong></p>
-      <input type="button" value="+" name="font_size_more" id="font_size_more" class="btn btn-primary">
-      <input type="button" value="-" name="font_size_less" id="font_size_less" class="btn btn-default">
+      <input type="button" value="+" name="font_size_more" id="font_size_more " class="btn btn-primary aumentar">
+      <input type="button" value="-" name="font_size_less" id="font_size_less " class="btn btn-default disminuir ">
       <br>
       <br>
       <p><strong>Font-Family</strong></p>
@@ -56,8 +86,8 @@
       
 
     </div>
-    <div class="container">
-        <h1>Hello, world!</h1>
+    <div class="container texto " >
+        <h1 >Hello, world!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
@@ -71,10 +101,11 @@
           <li>Item-2</li>
           <li>Item-3</li>
         </ul></div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	
 
   </body>
 </html>
