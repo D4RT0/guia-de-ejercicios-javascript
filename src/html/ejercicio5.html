@@ -9,7 +9,7 @@
   
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +35,56 @@
       }
     </style>
 
-<script>
+
+
+
+  </head>
+  <body class="bcolor">
+
+
+
+  
+    <div class="designer">
+      <h3>Toolbar</h3>
+      <p><strong>Font-size</strong></p>
+      <input type="button" value="+" name="font_size_more" id="font_size_more " class="btn btn-primary aumentar">
+      <input type="button" value="-" name="font_size_less" id="font_size_less " class="btn btn-default disminuir ">
+      <br>
+      <br>
+      <p><strong>Font-Family</strong></p>
+      <select name="font_family" id="font_family " class="form-control fs ">
+        <option >Seleccione tipografía</option>
+        <option value="Times New Roman">"Times New Roman", Times, serif</option>
+        <option value="Arial">Arial, Helvetica, sans-serif</option>
+        <option value="Impact">Impact, Charcoal, sans-serif </option>
+      </select>
+      <br>
+      <p><strong>Background-color</strong></p>
+      <input type="color" class="form-control col" id="bgcolor" value="#ffffff">
+      
+
+    </div>
+    <div class="container-fluid alltexto " >
+        <h1 >Hello, world!</h1>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
+        <h2>Subtitle</h2>
+        <p class="texto ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat debitis, quis sit molestiae at, ex, ducimus beatae voluptas quas dignissimos tempore nihil! Deserunt molestiae aspernatur, nam fugiat iure ab tempora.</p>
+        <ul>
+          <li>Item-1</li>
+          <li>Item-2</li>
+          <li>Item-3</li>
+        </ul></div>
+ 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script>
 
 $(document).ready(function(){
   
@@ -62,57 +111,17 @@ $(document).ready(function(){
   });
   
 	$(".fs").change(function() {
-    	$('.texto').css("font-family", $(this).val());
+    	$('.alltexto').css("font-family", $(this).val());
 
 	});
+
+	$(".col").on("change",function(){
+    	$(".bcolor").css("background-color",$(".col").val());
+});
 
 });
 </script>
 
-
-
-  </head>
-  <body>
-    <div class="designer">
-      <h3>Toolbar</h3>
-      <p><strong>Font-size</strong></p>
-      <input type="button" value="+" name="font_size_more" id="font_size_more " class="btn btn-primary aumentar">
-      <input type="button" value="-" name="font_size_less" id="font_size_less " class="btn btn-default disminuir ">
-      <br>
-      <br>
-      <p><strong>Font-Family</strong></p>
-      <select name="font_family" id="font_family " class="form-control fs ">
-        <option >Seleccione tipografía</option>
-        <option value="Times New Roman">"Times New Roman", Times, serif</option>
-        <option value="Arial">Arial, Helvetica, sans-serif</option>
-        <option value="Impact">Impact, Charcoal, sans-serif </option>
-      </select>
-      <br>
-      <p><strong>Background-color</strong></p>
-      <input type="color" class="form-control" id="bgcolor" value="#ffffff">
-      
-
-    </div>
-    <div class="container texto " >
-        <h1 >Hello, world!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde esse, minima qui magni et quae ab neque, quod ad aliquam, impedit ipsa optio autem nihil magnam. Accusamus, quia, dolores!</p>
-        <h2>Subtitle</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat debitis, quis sit molestiae at, ex, ducimus beatae voluptas quas dignissimos tempore nihil! Deserunt molestiae aspernatur, nam fugiat iure ab tempora.</p>
-        <ul>
-          <li>Item-1</li>
-          <li>Item-2</li>
-          <li>Item-3</li>
-        </ul></div>
- 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	
 
   </body>
 </html>
