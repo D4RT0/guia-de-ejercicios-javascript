@@ -61,8 +61,15 @@ $(document).ready(function(){
 	return false;
   });
   
+	$(".fs").change(function() {
+    	$('.texto').css("font-family", $(this).val());
+
+	});
+
 });
 </script>
+
+
 
   </head>
   <body>
@@ -74,11 +81,11 @@ $(document).ready(function(){
       <br>
       <br>
       <p><strong>Font-Family</strong></p>
-      <select name="font_family" id="font_family" class="form-control">
-        <option>Seleccione tipografía</option>
-        <option>"Times New Roman", Times, serif</option>
-        <option>Arial, Helvetica, sans-serif</option>
-        <option>Impact, Charcoal, sans-serif </option>
+      <select name="font_family" id="font_family " class="form-control fs ">
+        <option >Seleccione tipografía</option>
+        <option value="Times New Roman">"Times New Roman", Times, serif</option>
+        <option value="Arial">Arial, Helvetica, sans-serif</option>
+        <option value="Impact">Impact, Charcoal, sans-serif </option>
       </select>
       <br>
       <p><strong>Background-color</strong></p>
